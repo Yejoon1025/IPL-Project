@@ -25,7 +25,7 @@ public class Compiler {
             e.printStackTrace();
         }
         
-        //Divide the File up - works
+        //Divide the File up into Lines
         try {
             Scanner input = new Scanner(file);
             in = new String[lineNumber];
@@ -39,6 +39,14 @@ public class Compiler {
         //Analyse each sentence
         for (int i = 0; i < in.length; i++) {
             String line = in[i];
+            String[] words = line.split("\\s+");
+
+            for (int x = 0; x < words.length; x++) {
+                if (Verbs.checkIsVerb(words[x])) {
+                    Verbs.is(words[x-1],words[x+1]);
+                }
+
+            }
 
         }
     }
