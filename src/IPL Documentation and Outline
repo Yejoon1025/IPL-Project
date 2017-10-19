@@ -1,0 +1,10 @@
+Current supported syntax:
+A is B
+    Where A is a name/ variable and B is a supported data type
+What is A?
+    Calls a sysout on A
+
+Include support for
+Look for Basic functions and operators
+Basic io
+then Basic data types
